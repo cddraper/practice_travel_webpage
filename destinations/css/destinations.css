@@ -16,10 +16,12 @@ body {
 	position: fixed;
 	height: 50px;
 	width: 100%;
-	background: lightblue;
+	background: #3BC4CE;
 	padding-left: 1em;
 	padding-right: 2em;
 	align-items: center;
+	border-bottom: 1px solid black;
+	z-index: 1;
 }
 
 #navbar span {
@@ -54,34 +56,60 @@ nav a {
 }
 
 nav a:hover {
-	color: #bf941d;
+	color: #1E46E6;
 }
 
 main {
-	padding-top: 75px;
+	padding-top: 50px;
 }
 
 .destination h2{
-	width: 200px;
-	margin: auto;
-	text-align: center;
+	display: flex;
+	margin: 2em auto 1em auto;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid lightgray;
 }
 
 .countries {
 	display: grid;
-	grid-template-columns: 380px 380px 380px;
+	grid-template-columns: 25% 25% 25%;
 	justify-content: space-around;
 }
 
 .country {
 	display: grid;
 	grid-template-columns: 1fr;
-	width: 300px;
+	width: 25%;
+}
+
+.country h3, a {
+	text-align: center;
 }
 
 .country img {
-	max-height: 250px;
-	width: auto;
+	position: relative;
+    	float: left;
+    	width:  15em;
+    	height: 10em;
+    	background-position: 50% 50%;
+    	background-repeat:   no-repeat;
+    	background-size:     cover;
 	border-radius: 3px;
 	border: 2px solid black;
+	margin: 0.5em 0;
+}
+
+.country a {
+	text-decoration: none;
+	border: 1px solid blue;
+	border-radius: 3px;
+	width: 150px;
+	justify-self: center;
+}
+
+.country a:hover {
+	background: blue;
+	color: white;
 }
