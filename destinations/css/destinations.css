@@ -6,8 +6,7 @@
 body {
 	max-width: 100%;
 	margin: 0 auto 2em auto;
-	/*background: rgb(220,235,255);*/
-	font-family: raleway, helvetica, sans serif;
+	font-family: 'Raleway', helvetica, sans-serif;
 }
 
 #navbar {
@@ -19,14 +18,19 @@ body {
 	background: #3BC4CE;
 	padding-left: 1em;
 	padding-right: 2em;
+	padding-bottom: 0.5em;
 	align-items: center;
 	border-bottom: 1px solid black;
 	z-index: 1;
 }
 
-#navbar span {
+#brand {
 	font-size: 2em;
 	margin-bottom: 0;
+}
+
+.x {
+	font-size: 1.5em;
 }
 
 #brand:hover {
@@ -53,23 +57,40 @@ nav li {
 nav a {
 	text-decoration: none;
 	color: black;
+	font-weight: 500;
 }
 
 nav a:hover {
-	color: #1E46E6;
+	color: white;
 }
 
 main {
 	padding-top: 50px;
 }
 
+section:nth-of-type(even) {
+	background: #88d6f2;
+}
+
+.destination {
+	padding: 3em 0;
+}
+
 .destination h2{
 	display: flex;
-	margin: 2em auto 1em auto;
+	margin: 0 auto 2em auto;
+	width: 70%;
 	height: 50px;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid lightgray;
+}
+
+h2 {
+	border-bottom: 1px solid #9fbde0;
+}
+
+.odd {
+	border-bottom: 1px solid #dbd5d3;
 }
 
 .countries {
@@ -81,7 +102,7 @@ main {
 .country {
 	display: grid;
 	grid-template-columns: 1fr;
-	width: 25%;
+	width: 100%;
 }
 
 .country h3, a {
@@ -91,8 +112,8 @@ main {
 .country img {
 	position: relative;
     	float: left;
-    	width:  15em;
-    	height: 10em;
+		width: 100%;
+		max-height: auto;
     	background-position: 50% 50%;
     	background-repeat:   no-repeat;
     	background-size:     cover;
@@ -103,10 +124,13 @@ main {
 
 .country a {
 	text-decoration: none;
+	color: blue;
 	border: 1px solid blue;
+	padding: 9px 5px;
 	border-radius: 3px;
 	width: 150px;
 	justify-self: center;
+	align-self: center;
 }
 
 .country a:hover {
